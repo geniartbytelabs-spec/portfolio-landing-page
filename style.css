@@ -236,11 +236,6 @@ footer {
     max-width: 360px;
   }
 
-  .nav-inner {
-    flex-direction: column;
-    gap: 10px;
-  }
-
   .nav-links {
     justify-content: center;
     flex-wrap: wrap;
