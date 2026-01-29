@@ -203,7 +203,7 @@ footer {
 ========================= */
 
 /* Tablet + Mobile */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
     .hero {
         padding: 55px 0;
     }
@@ -248,7 +248,7 @@ footer {
 }
 
 /* Small Mobile */
-@media (max-width:480px) {
+@media (max-width:520px) {
     .brand {
         font-size: 16px;
     }
