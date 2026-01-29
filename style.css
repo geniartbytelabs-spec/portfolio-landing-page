@@ -1,270 +1,220 @@
 /* =========================
    0) Base / Reset
 ========================= */
-
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.6;
-    background-color: ivory;
-    color: #383838;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background: #ffffff;
+  color: #111;
 }
 
 img {
-    max-width: 100%;
-    display: block;
+  max-width: 100%;
+  display: block;
 }
 
-/* same container style (section width unification) */
+/* 공통 컨테이너 느낌 (섹션 폭 통일) */
 .nav-inner,
 .hero-inner,
-.project-inner {
-    width: min(1100px, 92%);
-    margin: 0 auto;
+.projects-inner {
+  width: min(1100px, 92%);
+  margin: 0 auto;
 }
 
 /* =========================
    1) Navbar
 ========================= */
-
 .navbar {
-    background: #383838;
-    padding: 12px 0;
+  background: #222;
+  padding: 12px 0;
 }
 
 .nav-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
 }
 
 .brand {
-    color: ivory;
-    font-weight: 700;
-    font-size: 18px;
-    letter-spacing: 0.2px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 18px;
+  letter-spacing: 0.2px;
 }
 
 .nav-links {
-    list-style: none;
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 
-    display: flex;
-    align-items: center;
-    gap: 12px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
 .nav-links a {
-    color: ivory;
-    text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 
-    padding: 8px 12px;
-    border-radius: 10px;
-    transition: background-color 0.15s ease;
+  padding: 8px 12px;
+  border-radius: 10px;
+  transition: background 0.15s ease;
 }
 
 .nav-links a:hover {
-    background-color: #444;  /* hover requirement */
+  background: #444; /* hover requirement */
 }
 
 /* =========================
    2) Hero
 ========================= */
-
 .hero {
-    background-color: #b3d9f0; /* section highlight requirement */
-    padding: 70px 0;
+  background: #b3d9f0; /* section highlight requirement */
+  padding: 70px 0;
 }
 
 .hero-inner {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 34px;
 }
 
 .hero-text h1 {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 50px;
-}
-
-.hero-text h1 {
-    margin: 0 0 14px;
-    font-size: 38px;
-    line-height: 1.15;
+  margin: 0 0 14px;
+  font-size: 38px;
+  line-height: 1.15;
 }
 
 .hero-text p {
-    margin: 0;
-    font-size: 18px;
-    max-width: 560px;
-    color: #383838;
+  margin: 0;
+  font-size: 18px;
+  max-width: 560px;
+  color: #1a1a1a;
 }
 
-.hero-text {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-}
-
-/* profile photo (crop minimize) */
+/* 프로필 사진용 (크롭 최소화, 자연스럽게) */
 .hero-image {
-    width: 320px;
-    height: auto;
-    border-radius: 18px; /* border-radius requirement */
-    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+  width: 320px;
+  height: auto;
+  border-radius: 18px; /* border-radius requirement */
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12); /* box-shadow requirement */
 }
-
 
 /* =========================
    3) Projects
 ========================= */
 .projects {
-    padding: 40px 0;
-    background-color: #f8f8f8;
-}
-
-.projects-inner {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
+  padding: 70px 0;
+  background: #f8f8f8;
 }
 
 .projects h2 {
-    margin: 0 0 22px;
-    text-align: center;
-    font-size: 28px;
+  margin: 0 0 22px;
+  text-align: center;
+  font-size: 28px;
 }
 
-/* Flexbox requirement: card width alignment */
+/* Flexbox requirement: 카드 가로 정렬 */
 .project-grid {
-    display: flex;
-    justify-content: center;
-    gap: 22px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  gap: 22px;
+  flex-wrap: wrap;
 }
 
-/* card design */
+/* 카드 디자인 */
 .project-card {
-    width: 310px;
-    background-color: ivory;
-    padding: 16px;
-    border-radius: 16px;
-    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+  width: 310px;
+  background: #fff;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
 }
 
-/* hover interaction */
+/* Bonus: hover 인터랙션 (깔끔하게) */
 .project-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
 .project-card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-    border-radius: 12px;
-    margin-bottom: 12px;
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 12px;
 }
 
 .project-card h3 {
-    margin: 0 0 8px;
-    font-size: 18px;
+  margin: 0 0 8px;
+  font-size: 18px;
 }
 
 .project-card p {
-    margin: 0;
-    color: #383838;
-    font-size: 15px;
+  margin: 0;
+  color: #333;
+  font-size: 15px;
 }
 
 /* =========================
    4) Footer
 ========================= */
-footer {
-    background-color: #383838;
-    color: ivory;
-    text-align: center;
-    padding: 18px 0;
-    font-size: 14px;
+.footer {
+  background: #222;
+  color: #fff;
+  text-align: center;
+  padding: 18px 0;
+  font-size: 14px;
 }
 
 /* =========================
    5) Responsive (Mobile)
 ========================= */
-
-/* Tablet + Mobile */
 @media (max-width: 900px) {
-    .hero {
-        padding: 55px 0;
-    }
+  .hero {
+    padding: 55px 0;
+  }
 
-    .hero-inner {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .hero-text h1 {
-        font-size: 30px;
-    }
-
-    .hero-text p {
-        max-width: 100%;
-        font-size: 16px;
-    }
-
-    .hero-image {
-        width: min(360px, 92%);
-    }
-
-    .project-grid {
+  .hero-inner {
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 32px;
+  }
+
+  .hero-text p {
+    max-width: 100%;
+  }
+
+  .hero-image {
+    width: min(360px, 92%);
+  }
+}
+
+@media (max-width: 520px) {
+  .brand {
+    font-size: 16px;
+  }
+
+  .nav-links {
+    gap: 8px;
+  }
+
+  .nav-links a {
+    padding: 7px 10px;
   }
 
   .project-card {
     width: 100%;
-    max-width: 360px;
   }
-
-  .nav-links {
-    justify-content: center;
-    flex-wrap: wrap;
-  }
-}
-
-/* Small Mobile */
-@media (max-width:520px) {
-    .brand {
-        font-size: 16px;
-    }
-
-    .nav-links {
-        gap: 8px;
-    }
-
-     .nav-links a {
-       padding: 7px 10px;
-    }
-
-     .hero-text h1 {
-      font-size: 26px;
-    }
-
-     .hero-text p {
-      font-size: 15px;
-    }
-
-     .project-card img {
-      height: 160px;
-    }
 }
